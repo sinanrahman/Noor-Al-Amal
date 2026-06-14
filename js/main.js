@@ -23,6 +23,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initChartLine();
     initParallax();
     initForm();
+    initBrandsSlider();
 });
 
 /* ─────────────────────────────────────────────────────────
@@ -514,4 +515,24 @@ function initForm() {
         });
  
     }
+}
+
+/* ─────────────────────────────────────────────────────────
+   BRANDS SLIDER SCROLL NAV
+───────────────────────────────────────────────────────── */
+function initBrandsSlider() {
+    const prevBtn = document.querySelector('.brand-nav-btn.prev');
+    const nextBtn = document.querySelector('.brand-nav-btn.next');
+    const sliderCol = document.querySelector('.brands-slider-col');
+    
+    if (!prevBtn || !nextBtn || !sliderCol) return;
+
+    // Scroll amount is roughly half the visible container width
+    prevBtn.addEventListener('click', () => {
+        sliderCol.scrollBy({ left: -(sliderCol.clientWidth / 2), behavior: 'smooth' });
+    });
+
+    nextBtn.addEventListener('click', () => {
+        sliderCol.scrollBy({ left: sliderCol.clientWidth / 2, behavior: 'smooth' });
+    });
 }
