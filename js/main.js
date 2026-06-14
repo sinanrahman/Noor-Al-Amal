@@ -1,5 +1,5 @@
 /* ═══════════════════════════════════════════════════════════
-   AL NOOR AL AMAL AUTOMOTIVE GROUP — main.js
+   NOOR AL AMAL AUTOMOTIVE GROUP — main.js
    Full premium interactions engine
 ═══════════════════════════════════════════════════════════ */
 

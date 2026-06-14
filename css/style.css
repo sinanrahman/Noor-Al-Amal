@@ -1,5 +1,5 @@
 /* ═══════════════════════════════════════════════════════════
-   AL NOOR AL AMAL AUTOMOTIVE GROUP
+   NOOR AL AMAL AUTOMOTIVE GROUP
    Premium Institutional Design System
    Reference: Toyota / BMW Group / Genesis / Lexus
 ═══════════════════════════════════════════════════════════ */
@@ -10,33 +10,33 @@
 /* ─── DESIGN TOKENS ─────────────────────────────────────── */
 :root {
     /* ── DARK THEME (DEFAULT) ── */
-    --bg:       #0C1614; /* Dark teal background from image */
-    --bg2:      #111E1B;
-    --card:     #162622;
+    --bg:       #000000; /* Pure black */
+    --bg2:      #0a0a0a;
+    --card:     #111111;
     --glass:    rgba(255,255,255,0.04);
     --glass-b:  rgba(255,255,255,0.08);
 
     --text:     #FFFFFF;
-    --text-2:   #A0B0AD;
-    --text-3:   #647572;
+    --text-2:   #A0A0A0;
+    --text-3:   #666666;
 
-    --gold:     #d0ca59e3; /* Replaced gold with silver/white */
-    --gold-d:   #B9C4C1; 
-    --gold-a:   rgba(242,244,243,0.15);
-    --gold-aa:  rgba(242,244,243,0.08);
+    --gold:     #ED1C24; /* Red Pigment */
+    --gold-d:   #C1121C; /* Darker red */
+    --gold-a:   rgba(237,28,36,0.15);
+    --gold-aa:  rgba(237,28,36,0.08);
 
     --border:   rgba(255,255,255,0.12);
     --border-2: rgba(255,255,255,0.06);
 
-    /* Accent glows: emerald + teal */
-    --em:   #153A33;
-    --tl:   #1B463E;
-    --em-g: rgba(21,58,51,0.6);
-    --tl-g: rgba(27,70,62,0.6);
+    /* Accent glows: red */
+    --em:   #ED1C24;
+    --tl:   #C1121C;
+    --em-g: rgba(237,28,36,0.6);
+    --tl-g: rgba(193,18,28,0.6);
 
     /* Typography */
-    --f-display: 'Manrope', 'Plus Jakarta Sans', 'Inter', system-ui, sans-serif;
-    --f-body:    'Inter', 'Plus Jakarta Sans', system-ui, sans-serif;
+    --f-display: 'Geist', 'Segoe UI Variable', system-ui, sans-serif;
+    --f-body:    'Geist', 'Segoe UI Variable', system-ui, sans-serif;
 
     /* Layout */
     --nav-h: 78px;
@@ -49,21 +49,21 @@
 
 /* ─── LIGHT THEME ───────────────────────────────────────── */
 [data-theme="light"] {
-    --bg:       #F0F4F3;
+    --bg:       #F5F5F5;
     --bg2:      #FFFFFF;
     --card:     #FFFFFF;
     --glass:    rgba(255,255,255,0.75);
     --glass-b:  rgba(255,255,255,0.9);
 
-    --text:     #0D1A18;
-    --text-2:   #546662;
-    --text-3:   #8A9E9A;
+    --text:     #000000;
+    --text-2:   #333333;
+    --text-3:   #666666;
 
     --border:   rgba(0,0,0,0.08);
     --border-2: rgba(0,0,0,0.05);
 
-    --em-g: rgba(21,58,51,0.06);
-    --tl-g: rgba(212,175,55,0.04);
+    --em-g: rgba(237,28,36,0.06);
+    --tl-g: rgba(237,28,36,0.04);
 }
 
 /* ─── THEME TRANSITION ──────────────────────────────────── */
@@ -359,18 +359,14 @@ img  { display: block; max-width: 100%; }
     z-index: 0;
     user-select: none;
 }
-.wm span {
-    font-family: var(--f-display);
-    font-size: min(28vw, 380px);
-    font-weight: 800;
-    letter-spacing: -0.04em;
-    color: var(--gold);
+.wm img {
+    height: min(28vw, 380px);
+    width: auto;
     opacity: 0.032;
     mix-blend-mode: soft-light;
-    white-space: nowrap;
     display: block;
 }
-[data-theme="light"] .wm span {
+[data-theme="light"] .wm img {
     opacity: 0.045;
     mix-blend-mode: multiply;
 }
@@ -546,8 +542,7 @@ img  { display: block; max-width: 100%; }
 }
 .hero-bg-img {
     width: 100%; height: 100%;
-    object-fit: cover; object-position: center;
-    transform: scale(1.08);
+    object-fit: fill; object-position: center;
     transition: transform 0.1s linear;
     will-change: transform;
 }
@@ -1521,14 +1516,13 @@ img  { display: block; max-width: 100%; }
     transform: translate(-50%,-50%);
     pointer-events: none; user-select: none; z-index: 0;
 }
-.footer-wm span {
-    font-family: var(--f-display);
-    font-size: min(22vw, 300px);
-    font-weight: 800; letter-spacing: -0.05em;
-    color: var(--gold); opacity: 0.025;
-    mix-blend-mode: soft-light; white-space: nowrap; display: block;
+.footer-wm img {
+    height: min(22vw, 300px);
+    width: auto;
+    opacity: 0.025;
+    mix-blend-mode: soft-light; display: block;
 }
-[data-theme="light"] .footer-wm span {
+[data-theme="light"] .footer-wm img {
     opacity: 0.04; mix-blend-mode: multiply;
 }
 

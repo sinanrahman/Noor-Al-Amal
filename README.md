@@ -1,6 +1,6 @@
-# Al Noor Al Amal Automotive Group - Corporate Website
+# Noor Al Amal Automotive Group - Corporate Website
 
-A world-class, premium corporate automotive landing page website engineered for **Al Noor Al Amal Automotive Group**, headquartered in Dubai, United Arab Emirates. 
+A world-class, premium corporate automotive landing page website engineered for **Noor Al Amal Automotive Group**, headquartered in Dubai, United Arab Emirates. 
 
 This website has been designed to represent a multi-million-dollar GCC automotive corporation, optimized to engage institutional clients, strategic partners, and sovereign wealth investors.
 
