@@ -277,21 +277,33 @@ function initMobileMenu() {
 function initHorizontalScroll() {
     const section = document.getElementById('carousel');
     const inner = document.getElementById('ops-horizontal-inner');
+    const slides = gsap.utils.toArray('.oslide');
     
-    if (!section || !inner || typeof gsap === 'undefined' || typeof ScrollTrigger === 'undefined') return;
+    if (!section || !inner || !slides.length || typeof gsap === 'undefined' || typeof ScrollTrigger === 'undefined') return;
 
-    gsap.to(inner, {
-        x: () => -(inner.scrollWidth - window.innerWidth),
-        ease: "none",
+    let tl = gsap.timeline({
         scrollTrigger: {
             trigger: section,
             start: "top top",
-            end: () => `+=${inner.scrollWidth - window.innerWidth}`,
+            end: "+=3000",
             pin: true,
             scrub: 1,
             invalidateOnRefresh: true,
         }
     });
+
+    gsap.set(slides[0], { x: 0 });
+    for(let i = 1; i < slides.length; i++) {
+        gsap.set(slides[i], { x: "100vw" });
+    }
+
+    for(let i = 1; i < slides.length; i++) {
+        let finalX = i * 4; 
+        tl.to(slides[i], {
+            x: finalX + "vw",
+            ease: "power1.inOut"
+        }, i === 1 ? undefined : "-=0.3");
+    }
 }
 
 /* ─────────────────────────────────────────────────────────
