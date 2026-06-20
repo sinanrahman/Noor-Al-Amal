@@ -106,6 +106,22 @@ body,
 }
 
 /* ─── BASE RESET ─────────────────────────────────────────── */
+html.lenis, html.lenis body {
+  height: auto;
+}
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+.lenis.lenis-scrolling iframe {
+  pointer-events: none;
+}
+
 *,
 *::before,
 *::after {
@@ -120,7 +136,6 @@ html {
     color: var(--text);
     font-family: var(--f-body);
     -webkit-font-smoothing: antialiased;
-    overflow-x: hidden;
 }
 
 body {

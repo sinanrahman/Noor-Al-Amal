@@ -145,6 +145,12 @@ function initLenis() {
     if (typeof gsap !== 'undefined') {
         gsap.ticker.add(t => lenis.raf(t * 1000));
         gsap.ticker.lagSmoothing(0);
+    } else {
+        function raf(time) {
+            lenis.raf(time);
+            requestAnimationFrame(raf);
+        }
+        requestAnimationFrame(raf);
     }
 }
 
@@ -580,7 +586,7 @@ function initPerformanceCharts() {
 
     Chart.defaults.color = cColors.text;
     Chart.defaults.font.family = '"Inter", sans-serif';
-    
+
     let mChart, tChart, cChart;
 
     const mCtx = document.getElementById('marketGraph');
@@ -822,7 +828,7 @@ function initPerformanceCharts() {
     const observer = new MutationObserver(() => {
         cColors = getChartColors();
         Chart.defaults.color = cColors.text;
-        
+
         [mChart, tChart, cChart].forEach(chart => {
             if (!chart) return;
             if (chart.options.plugins && chart.options.plugins.legend && chart.options.plugins.legend.labels) {
