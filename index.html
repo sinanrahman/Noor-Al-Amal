@@ -443,10 +443,12 @@
 
                     .ovs-left-only {
                         border-left: 1px solid var(--border-2);
-                        padding-left: 25px;
-                        padding-top: 80px;
-                        padding-bottom: 10px;
-                        padding-right: 0;
+                        padding: 40px 20px;
+                        text-align: center;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
                     }
                 </style>
                 <div
@@ -481,93 +483,199 @@
 
             <div class="container">
 
-                <div class="exc-hdr" style="display: block; margin-bottom: 40px;">
-                    <i class="bi bi-graph-up-arrow sec-icon reveal"></i>
-                    <div class="sec-label reveal">Financial Trajectory</div>
-                    <h2 class="sec-h2 reveal">Future Performance<br><em class="gold">Outlook</em></h2>
-                    <p class="sec-body reveal" style="margin-bottom:20px;max-width:800px; color: var(--text-2);">Built
-                        for trade, service, franchise and mobility markets</p>
-                    <p class="sec-body reveal" style="margin-bottom:30px;max-width:800px">
-                        Our 5-year growth plan is based on multiple automobile revenue channels<span
-                            id="exc-more-dots"></span><span id="exc-more-text" style="display: none;">. Instead of
-                            depending on one business model, we
-                            are developing a diversified corporate ecosystem with trading, service, franchise, resale,
-                            and
-                            global sourcing opportunities.</span>
-                        <a href="javascript:void(0);"
-                            onclick="const moreText = document.getElementById('exc-more-text'); const dots = document.getElementById('exc-more-dots'); if(moreText.style.display === 'none') { moreText.style.display = 'inline'; dots.style.display = 'none'; this.innerText = 'less...'; } else { moreText.style.display = 'none'; dots.style.display = 'inline'; this.innerText = 'more...'; }"
-                            style="color: var(--gold); font-size: 0.95rem; text-decoration: none; margin-left: 5px;">more...</a>
+                <div class="exc-layout">
+                    <div class="exc-left" style="position: relative; padding-bottom: 60px;">
+                        <!-- Background Image layer -->
+                        <div class="reveal" style="position: absolute; top: 0; left: -20px; right: -20px; bottom: 0; z-index: 0; pointer-events: none;">
+                            <img src="assets/images/hero.jpg" alt="Future Performance Concept" style="width: 100%; height: 100%; object-fit: cover; object-position: bottom; mask-image: linear-gradient(to bottom, transparent 0%, black 50%, black 100%); -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 50%, black 100%); opacity: 0.6;">
+                        </div>
+
+                        <div class="exc-hdr" style="display: block; position: relative; z-index: 2;">
+                            <div class="reveal" style="margin-bottom: 20px;">
+                                <div style="font-size: 1.8rem; color: var(--text); margin-bottom: 5px; display: inline-block;">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" viewBox="0 0 16 16">
+                                      <path fill-rule="evenodd" d="M0 0h1v15h15v1H0V0Zm14.817 3.113a.5.5 0 0 1 .07.704l-4.5 5.5a.5.5 0 0 1-.74.037L7.06 6.767l-3.656 5.027a.5.5 0 0 1-.808-.588l4-5.5a.5.5 0 0 1 .758-.06l2.609 2.61 4.15-5.073a.5.5 0 0 1 .704-.07Z"/>
+                                    </svg>
+                                </div>
+                                <div class="sec-label" style="font-size: 0.75rem; font-weight: 700; letter-spacing: 2px; color: #b02323; text-transform: uppercase;">FINANCIAL TRAJECTORY</div>
+                            </div>
+                            
+                            <h2 class="sec-h2 reveal" style="font-size: clamp(3rem, 5vw, 4rem); font-weight: 800; letter-spacing: -1px; line-height: 1.1; margin-bottom: 20px;">
+                                Future<br>Performance<br><em style="color: #b02323; font-style: italic;">Outlook</em>
+                            </h2>
+                            <div class="red-line reveal" style="background-color: #b02323; width: 60px; height: 3px; margin: 20px 0;"></div>
+                            
+                            <p class="sec-body reveal" style="margin-bottom:20px; color: var(--text-2);">Built
+                                for trade, service, franchise and mobility markets</p>
+                            <p class="sec-body reveal" style="margin-bottom:30px;">
+                                Our 5-year growth plan is based on multiple automobile revenue channels<span
+                                    id="exc-more-dots"></span><span id="exc-more-text" style="display: none;">. Instead of
+                                    depending on one business model, we
+                                    are developing a diversified corporate ecosystem with trading, service, franchise, resale,
+                                    and
+                                    global sourcing opportunities.</span>
+                                <a href="javascript:void(0);"
+                                    onclick="const moreText = document.getElementById('exc-more-text'); const dots = document.getElementById('exc-more-dots'); if(moreText.style.display === 'none') { moreText.style.display = 'inline'; dots.style.display = 'none'; this.innerText = 'less...'; } else { moreText.style.display = 'none'; dots.style.display = 'inline'; this.innerText = 'more...'; }"
+                                    style="color: #b02323; font-size: 0.95rem; text-decoration: none; margin-left: 5px;">more...</a>
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="exc-right" style="height: 100%;">
+                        <div class="exc-cards" style="height: 100%; align-content: space-between;">
+                            <!-- Card 01 -->
+                            <div class="exc-card reveal">
+                                <div class="exc-icon-wrapper"><i class="bi bi-car-front"></i></div>
+                                <div class="exc-card-num">01</div>
+                                <p class="exc-card-text">Growth in vehicle ownership and longer vehicle life cycles.</p>
+                            </div>
+                            <!-- Card 02 -->
+                            <div class="exc-card reveal">
+                                <div class="exc-icon-wrapper"><i class="bi bi-gear-wide-connected"></i></div>
+                                <div class="exc-card-num">02</div>
+                                <p class="exc-card-text">Rising demand for spare parts and replacement components.</p>
+                            </div>
+                            <!-- Card 03 -->
+                            <div class="exc-card reveal">
+                                <div class="exc-icon-wrapper"><i class="bi bi-shop"></i></div>
+                                <div class="exc-card-num">03</div>
+                                <p class="exc-card-text">Increasing need for organized workshops and service networks.</p>
+                            </div>
+                            <!-- Card 04 -->
+                            <div class="exc-card reveal">
+                                <div class="exc-icon-wrapper"><i class="bi bi-arrow-repeat"></i></div>
+                                <div class="exc-card-num">04</div>
+                                <p class="exc-card-text">Growth of used vehicle trading and certified resale.</p>
+                            </div>
+                            <!-- Card 05 -->
+                            <div class="exc-card reveal">
+                                <div class="exc-icon-wrapper"><i class="bi bi-ev-front"></i></div>
+                                <div class="exc-card-num">05</div>
+                                <p class="exc-card-text">Electric vehicle transition creating service and diagnostics opportunities.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Performance Graphs & Forecasting Layout -->
+                <div class="exc-layout" style="margin-top: 100px; margin-bottom: 30px;">
+                    <!-- LEFT COLUMN -->
+                    <div class="exc-left" style="display: flex; flex-direction: column;">
+                        <div class="exc-live reveal" style="margin-bottom: 24px; color: var(--text-2);">
+                            <div style="width: 44px; height: 44px; border-radius: 50%; margin-bottom: 0; margin-right: 16px; background: #ee2020; color: white; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                                <i class="bi bi-graph-up" style="color: white; font-size: 1.2rem;"></i>
+                            </div>
+                            <span style="letter-spacing: 4px; font-size: 0.65rem; font-weight: 700;">DESIGN VERSION 4</span>
+                        </div>
+                        <div class="red-line reveal" style="background-color: #ee2020; width: 40px; height: 3px; margin: 0 0 20px 0;"></div>
+                        <h2 class="sec-h2 reveal" style="font-size: clamp(3.5rem, 5vw, 5rem); font-weight: 800; letter-spacing: -2px; line-height: 1.05; margin-bottom: 20px;">Performance<br>Graphs &<br><em class="gold" style="color: #ee2020; font-style: italic;">Forecasting</em></h2>
+                        <div class="red-line reveal" style="background-color: #ee2020; width: 40px; height: 3px; margin: 0 0 20px 0;"></div>
+                        <p class="sec-body reveal" style="margin-bottom: 0; font-size: 1.3rem; line-height: 1.6; color: var(--text-2);">Global opportunity +<br>company 5-year expansion</p>
+                    </div>
+
+                    <!-- RIGHT COLUMN -->
+                    <div class="exc-right">
+                        <!-- TOP GRAPHS -->
+                        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px;">
+                            <!-- TOP LEFT -->
+                            <div class="reveal">
+                                <div style="background: var(--card); border: 1px solid var(--border); border-radius: 8px; padding: 30px; box-shadow: 0 4px 20px rgba(0,0,0,0.05); height: 100%; display: flex; flex-direction: column;">
+                                    <div style="display: flex; align-items: center; margin-bottom: 24px;">
+                                        <div style="background: #b02323; display: flex; align-items: center; justify-content: center; width: 44px; height: 38px; color: white; clip-path: polygon(0 0, 75% 0, 100% 50%, 75% 100%, 0 100%); margin-right: 15px; flex-shrink: 0;">
+                                            <i class="bi bi-globe" style="font-size: 1.1rem;"></i>
+                                        </div>
+                                        <h3 style="font-family: var(--f-display); font-size: 1.1rem; font-weight: 700; margin: 0; line-height: 1.2; color: var(--text);">
+                                            Global Automobile Opportunity<br><span style="color: #b02323;">– 2025 to 2030</span>
+                                        </h3>
+                                    </div>
+                                    <div style="position: relative; height: 250px; width: 100%; margin-bottom: 20px;">
+                                        <canvas id="marketGraph"></canvas>
+                                    </div>
+                                    <p style="text-align: center; font-size: 0.75rem; color: var(--text-2); font-style: italic; margin-top: auto;">Market graph uses publicly available market-size estimates and CAGR references for aftermarket parts, used cars, and repair/maintenance services. Use it as a website/investor visual, not as audited financial advice.</p>
+                                </div>
+                            </div>
+
+                            <!-- TOP RIGHT -->
+                            <div class="reveal">
+                                <div style="background: var(--card); border: 1px solid var(--border); border-radius: 8px; padding: 30px; box-shadow: 0 4px 20px rgba(0,0,0,0.05); height: 100%; display: flex; flex-direction: column;">
+                                    <div style="display: flex; align-items: center; margin-bottom: 24px;">
+                                        <div style="background: #b02323; display: flex; align-items: center; justify-content: center; width: 44px; height: 38px; color: white; clip-path: polygon(0 0, 75% 0, 100% 50%, 75% 100%, 0 100%); margin-right: 15px; flex-shrink: 0;">
+                                            <i class="bi bi-bar-chart-fill" style="font-size: 1.1rem;"></i>
+                                        </div>
+                                        <h3 style="font-family: var(--f-display); font-size: 1.1rem; font-weight: 700; margin: 0; line-height: 1.2; color: var(--text);">
+                                            Company 5-Year Expansion Forecast
+                                        </h3>
+                                    </div>
+                                    <div style="position: relative; height: 250px; width: 100%; margin-bottom: 20px;">
+                                        <canvas id="companyGraph"></canvas>
+                                    </div>
+                                    <p style="text-align: center; font-size: 0.75rem; color: var(--text-2); font-style: italic; margin-top: auto;">Company graph uses sample internal planning targets. Replace with audited or approved company targets before publishing.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- BOTTOM GRAPH FULL WIDTH -->
+                <div class="reveal" style="margin-bottom: 20px;">
+                    <div style="background: var(--card); border: 1px solid var(--border); border-radius: 8px; padding: 30px; box-shadow: 0 4px 20px rgba(0,0,0,0.05); display: flex; flex-wrap: wrap; gap: 40px;">
+                        <!-- Graph section -->
+                        <div style="flex: 1; min-width: 300px; display: flex; flex-direction: column;">
+                            <div style="display: flex; align-items: center; margin-bottom: 24px;">
+                                <div style="background: #b02323; display: flex; align-items: center; justify-content: center; width: 44px; height: 38px; color: white; clip-path: polygon(0 0, 75% 0, 100% 50%, 75% 100%, 0 100%); margin-right: 15px; flex-shrink: 0;">
+                                    <i class="bi bi-bullseye" style="font-size: 1.1rem;"></i>
+                                </div>
+                                <h3 style="font-family: var(--f-display); font-size: 1.1rem; font-weight: 700; margin: 0; line-height: 1.2; color: var(--text);">
+                                    5-Year Consolidated Growth Overview
+                                </h3>
+                            </div>
+                            <div style="position: relative; height: 350px; width: 100%;">
+                                <canvas id="tableGraph"></canvas>
+                            </div>
+                        </div>
+
+                        <!-- Stats section -->
+                        <div style="width: 200px; display: flex; flex-direction: column; justify-content: center; gap: 40px; border-left: 1px solid var(--border); padding-left: 30px; flex-shrink: 0;">
+                            <!-- Stat 1 -->
+                            <div style="display: flex; align-items: center; gap: 15px;">
+                                <div style="width: 48px; height: 48px; border-radius: 50%; background: var(--bg2); border: 1px solid var(--border); display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                                    <i class="bi bi-bar-chart-fill" style="color: #b02323; font-size: 1.2rem;"></i>
+                                </div>
+                                <div>
+                                    <div style="font-size: 1.6rem; font-weight: 800; color: #b02323; line-height: 1; margin-bottom: 4px;">5</div>
+                                    <div style="font-size: 0.75rem; color: var(--text-2); line-height: 1.3;">Years of Strategic<br>Expansion</div>
+                                </div>
+                            </div>
+                            <!-- Stat 2 -->
+                            <div style="display: flex; align-items: center; gap: 15px;">
+                                <div style="width: 48px; height: 48px; border-radius: 50%; background: var(--bg2); border: 1px solid var(--border); display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                                    <i class="bi bi-globe" style="color: #b02323; font-size: 1.2rem;"></i>
+                                </div>
+                                <div>
+                                    <div style="font-size: 1.6rem; font-weight: 800; color: #b02323; line-height: 1; margin-bottom: 4px;">3</div>
+                                    <div style="font-size: 0.75rem; color: var(--text-2); line-height: 1.3;">Global Market<br>Segments</div>
+                                </div>
+                            </div>
+                            <!-- Stat 3 -->
+                            <div style="display: flex; align-items: center; gap: 15px;">
+                                <div style="width: 48px; height: 48px; border-radius: 50%; background: var(--bg2); border: 1px solid var(--border); display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                                    <i class="bi bi-bullseye" style="color: #b02323; font-size: 1.2rem;"></i>
+                                </div>
+                                <div>
+                                    <div style="font-size: 1.6rem; font-weight: 800; color: #b02323; line-height: 1; margin-bottom: 4px;">1</div>
+                                    <div style="font-size: 0.75rem; color: var(--text-2); line-height: 1.3;">Unified Growth<br>Strategy</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- DISCLAIMER -->
+                <div class="reveal">
+                    <p style="font-size: 0.75rem; color: var(--text-3); line-height: 1.5; margin: 0; font-style: italic;">
+                        Source: Public market reports, industry research, and internal planning data.<br>
+                        <strong style="color: var(--text); font-style: normal;">For investor presentation use only. Not financial advice.</strong>
                     </p>
-                </div>
-
-                <ul class="reveal"
-                    style="list-style-type: none; margin-left: 0; padding-left: 20px; margin-bottom: 50px; color: var(--text); font-size: 1.1rem; line-height: 1.8;">
-                    <li style="margin-bottom: 15px; position: relative;"><span
-                            style="position: absolute; left: -20px; color: var(--gold);">&bull;</span> Growth in vehicle
-                        ownership and longer vehicle life cycles.</li>
-                    <li style="margin-bottom: 15px; position: relative;"><span
-                            style="position: absolute; left: -20px; color: var(--gold);">&bull;</span> Rising demand for
-                        spare parts and replacement components.</li>
-                    <li style="margin-bottom: 15px; position: relative;"><span
-                            style="position: absolute; left: -20px; color: var(--gold);">&bull;</span> Increasing need
-                        for organized workshops and service networks.</li>
-                    <li style="margin-bottom: 15px; position: relative;"><span
-                            style="position: absolute; left: -20px; color: var(--gold);">&bull;</span> Growth of used
-                        vehicle trading and certified resale.</li>
-                    <li style="margin-bottom: 15px; position: relative;"><span
-                            style="position: absolute; left: -20px; color: var(--gold);">&bull;</span> Electric vehicle
-                        transition creating service and diagnostics opportunities.</li>
-                </ul>
-
-                <div class="reveal" style="padding-bottom: 20px;">
-                    <div
-                        style="background: var(--card); border: 1px solid var(--border); border-radius: 8px; padding: 30px; box-shadow: 0 4px 20px rgba(0,0,0,0.2);">
-                        <div style="position: relative; height: 400px; width: 100%;">
-                            <canvas id="tableGraph"></canvas>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Performance Graphs & Forecasting -->
-                <div class="reveal" style="margin-top: 60px;">
-                    <div style="text-align: center; margin-bottom: 40px;">
-                        <h2 class="sec-h2" style="font-size: 2.2rem; margin-bottom: 10px;">Performance Graphs & <em
-                                class="gold">Forecasting</em></h2>
-                        <p class="sec-body" style="color: var(--text-2);">Global opportunity + company 5-year expansion
-                        </p>
-                    </div>
-
-                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 30px;">
-                        <div
-                            style="background: var(--card); border: 1px solid var(--border); border-radius: 8px; padding: 30px; box-shadow: 0 4px 20px rgba(0,0,0,0.2);">
-                            <h3
-                                style="text-align: center; margin-bottom: 20px; font-size: 1.3rem; font-family: var(--f-display);">
-                                Global Automobile Opportunity - 2025 to 2030</h3>
-                            <div style="position: relative; height: 350px; width: 100%;">
-                                <canvas id="marketGraph"></canvas>
-                            </div>
-                            <p
-                                style="text-align: center; font-size: 0.85rem; color: var(--text-2); margin-top: 20px; font-style: italic;">
-                                Market graph uses publicly available market-size estimates and CAGR references for
-                                aftermarket parts, used cars, and repair/maintenance services. Use it as a
-                                website/investor
-                                visual, not as audited financial advice.</p>
-                        </div>
-
-                        <div
-                            style="background: var(--card); border: 1px solid var(--border); border-radius: 8px; padding: 30px; box-shadow: 0 4px 20px rgba(0,0,0,0.2);">
-                            <h3
-                                style="text-align: center; margin-bottom: 20px; font-size: 1.3rem; font-family: var(--f-display);">
-                                Company 5-Year Expansion Forecast</h3>
-                            <div style="position: relative; height: 350px; width: 100%;">
-                                <canvas id="companyGraph"></canvas>
-                            </div>
-                            <p
-                                style="text-align: center; font-size: 0.85rem; color: var(--text-2); margin-top: 20px; font-style: italic;">
-                                Company graph uses sample internal planning targets. Replace with audited or approved
-                                company targets before publishing.</p>
-                        </div>
-                    </div>
                 </div>
 
             </div>
@@ -579,117 +687,70 @@
 ═══════════════════════════════════════════════════════════ -->
         <section class="section traj-sec" id="trajectory">
             <div class="container">
-                <i class="bi bi-graph-up-arrow sec-icon reveal"></i>
-                <div class="sec-label reveal">Financial Trajectory</div>
-                <h2 class="sec-h2 reveal">The 2030 Strategic<br><em class="gold">Trajectory</em></h2>
-                <p class="sec-body reveal" style="margin-bottom:90px;max-width:580px">A phased approach to regional
-                    automotive leadership — structured for scalable execution, investor transparency, and measurable
-                    milestone delivery.</p>
+                <h2 class="sec-h2 reveal" style="font-size: clamp(3rem, 5vw, 4rem); font-weight: 800; letter-spacing: -1px; line-height: 1.1; margin-bottom: 10px;">The 2030 Strategic<br><span style="color: #b02323;">Trajectory</span></h2>
+                <div class="red-line reveal" style="background-color: #b02323; width: 60px; height: 3px; margin: 20px 0;"></div>
+                <p class="sec-body reveal" style="margin-bottom:60px; max-width:580px; font-size: 1.1rem; color: var(--text-2); line-height: 1.6;">A phased approach to regional automotive leadership — structured for scalable execution, investor transparency, and measurable milestone delivery.</p>
 
-                <!-- Progress line -->
-                <div class="tl-prog-wrap" aria-hidden="true">
-                    <div class="tl-prog" id="tl-prog"></div>
-                </div>
-
-                <div class="tl-grid">
-
-                    <div class="tl-node reveal">
-                        <div class="tl-dot-wrap">
-                            <div class="tl-dot"></div>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; align-items: stretch;">
+                    <!-- Card 01 -->
+                    <div class="reveal traj-card-hover" style="background: var(--bg2); border: 1px solid var(--border); border-radius: 8px; padding: 30px 20px; text-align: center; display: flex; flex-direction: column;">
+                        <div style="margin: 0 auto 20px; width: 60px; height: 60px; border-radius: 50%; border: 1px solid rgba(176,35,35,0.2); background: rgba(176,35,35,0.05); display: flex; align-items: center; justify-content: center; font-size: 1.5rem; font-weight: 800; color: #b02323; font-family: var(--f-display);">01</div>
+                        <div style="position: relative; margin-bottom: 20px;">
+                            <div style="position: absolute; top: 50%; left: 0; right: 0; height: 1px; background: var(--border); z-index: 1;"></div>
+                            <span style="position: relative; z-index: 2; background: var(--bg2); padding: 0 10px; font-size: 0.7rem; letter-spacing: 2px; color: var(--text-2); font-weight: 600;">PHASE 01</span>
                         </div>
-                        <div class="tl-yr gold">Year 1</div>
-                        <div class="tl-card">
-                            <span class="tl-ph">PHASE 01</span>
-                            <h4 class="tl-h4">Foundation & Market Entry</h4>
-                            <p class="tl-p">Brand launch, supplier onboarding, initial workshop setup<span
-                                    id="tl-more-dots-1">...</span><span id="tl-more-text-1" style="display: none;">,
-                                    spare parts
-                                    retail/wholesale entry, used vehicle trading pilot, and investor
-                                    documentation.</span>
-                                <a href="javascript:void(0);"
-                                    onclick="const moreText = document.getElementById('tl-more-text-1'); const dots = document.getElementById('tl-more-dots-1'); if(moreText.style.display === 'none') { moreText.style.display = 'inline'; dots.style.display = 'none'; this.innerText = 'less...'; } else { moreText.style.display = 'none'; dots.style.display = 'inline'; this.innerText = 'more...'; }"
-                                    style="color: var(--gold); font-size: 0.85rem; text-decoration: none; margin-left: 5px;">more...</a>
-                            </p>
+                        <h4 style="font-size: 1.1rem; font-weight: 700; margin-bottom: 15px; line-height: 1.3;">Foundation &<br>Market Entry</h4>
+                        <p style="font-size: 0.85rem; color: var(--text-2); line-height: 1.5; margin: 0;">Brand launch, supplier onboarding, initial workshop setup...</p>
+                    </div>
+                    
+                    <!-- Card 02 -->
+                    <div class="reveal traj-card-hover" style="background: var(--bg2); border: 1px solid var(--border); border-radius: 8px; padding: 30px 20px; text-align: center; display: flex; flex-direction: column;">
+                        <div style="margin: 0 auto 20px; width: 60px; height: 60px; border-radius: 50%; border: 1px solid rgba(176,35,35,0.2); background: rgba(176,35,35,0.05); display: flex; align-items: center; justify-content: center; font-size: 1.5rem; font-weight: 800; color: #b02323; font-family: var(--f-display);">02</div>
+                        <div style="position: relative; margin-bottom: 20px;">
+                            <div style="position: absolute; top: 50%; left: 0; right: 0; height: 1px; background: var(--border); z-index: 1;"></div>
+                            <span style="position: relative; z-index: 2; background: var(--bg2); padding: 0 10px; font-size: 0.7rem; letter-spacing: 2px; color: var(--text-2); font-weight: 600;">PHASE 02</span>
                         </div>
+                        <h4 style="font-size: 1.1rem; font-weight: 700; margin-bottom: 15px; line-height: 1.3;">Expansion &<br>Process Standardization</h4>
+                        <p style="font-size: 0.85rem; color: var(--text-2); line-height: 1.5; margin: 0;">Workshop SOPs, garage franchise model, inventory control...</p>
                     </div>
 
-                    <div class="tl-node reveal">
-                        <div class="tl-dot-wrap">
-                            <div class="tl-dot"></div>
+                    <!-- Card 03 -->
+                    <div class="reveal traj-card-hover" style="background: var(--bg2); border: 1px solid var(--border); border-radius: 8px; padding: 30px 20px; text-align: center; display: flex; flex-direction: column;">
+                        <div style="margin: 0 auto 20px; width: 60px; height: 60px; border-radius: 50%; border: 1px solid rgba(176,35,35,0.2); background: rgba(176,35,35,0.05); display: flex; align-items: center; justify-content: center; font-size: 1.5rem; font-weight: 800; color: #b02323; font-family: var(--f-display);">03</div>
+                        <div style="position: relative; margin-bottom: 20px;">
+                            <div style="position: absolute; top: 50%; left: 0; right: 0; height: 1px; background: var(--border); z-index: 1;"></div>
+                            <span style="position: relative; z-index: 2; background: var(--bg2); padding: 0 10px; font-size: 0.7rem; letter-spacing: 2px; color: var(--text-2); font-weight: 600;">PHASE 03</span>
                         </div>
-                        <div class="tl-yr gold">Year 2</div>
-                        <div class="tl-card">
-                            <span class="tl-ph">PHASE 02</span>
-                            <h4 class="tl-h4">Expansion & Process Standardization</h4>
-                            <p class="tl-p">Workshop SOPs, garage franchise model, inventory control<span
-                                    id="tl-more-dots-2">...</span><span id="tl-more-text-2" style="display: none;">,
-                                    customer CRM,
-                                    wholesale dealer network, and vehicle inspection process.</span>
-                                <a href="javascript:void(0);"
-                                    onclick="const moreText = document.getElementById('tl-more-text-2'); const dots = document.getElementById('tl-more-dots-2'); if(moreText.style.display === 'none') { moreText.style.display = 'inline'; dots.style.display = 'none'; this.innerText = 'less...'; } else { moreText.style.display = 'none'; dots.style.display = 'inline'; this.innerText = 'more...'; }"
-                                    style="color: var(--gold); font-size: 0.85rem; text-decoration: none; margin-left: 5px;">more...</a>
-                            </p>
-                        </div>
+                        <h4 style="font-size: 1.1rem; font-weight: 700; margin-bottom: 15px; line-height: 1.3;">Regional<br>Growth</h4>
+                        <p style="font-size: 0.85rem; color: var(--text-2); line-height: 1.5; margin: 0;">15+ branch/franchise network, regional warehouse planning...</p>
                     </div>
 
-                    <div class="tl-node reveal">
-                        <div class="tl-dot-wrap">
-                            <div class="tl-dot"></div>
+                    <!-- Card 04 -->
+                    <div class="reveal traj-card-hover" style="background: var(--bg2); border: 1px solid var(--border); border-radius: 8px; padding: 30px 20px; text-align: center; display: flex; flex-direction: column;">
+                        <div style="margin: 0 auto 20px; width: 60px; height: 60px; border-radius: 50%; border: 1px solid rgba(176,35,35,0.2); background: rgba(176,35,35,0.05); display: flex; align-items: center; justify-content: center; font-size: 1.5rem; font-weight: 800; color: #b02323; font-family: var(--f-display);">04</div>
+                        <div style="position: relative; margin-bottom: 20px;">
+                            <div style="position: absolute; top: 50%; left: 0; right: 0; height: 1px; background: var(--border); z-index: 1;"></div>
+                            <span style="position: relative; z-index: 2; background: var(--bg2); padding: 0 10px; font-size: 0.7rem; letter-spacing: 2px; color: var(--text-2); font-weight: 600;">PHASE 04</span>
                         </div>
-                        <div class="tl-yr gold">Year 3</div>
-                        <div class="tl-card">
-                            <span class="tl-ph">PHASE 03</span>
-                            <h4 class="tl-h4">Regional Growth</h4>
-                            <p class="tl-p">15+ branch/franchise network, regional warehouse planning<span
-                                    id="tl-more-dots-3">...</span><span id="tl-more-text-3" style="display: none;">,
-                                    import supplier
-                                    partnerships, certified resale, fleet maintenance contracts, and institutional
-                                    collaborations.</span>
-                                <a href="javascript:void(0);"
-                                    onclick="const moreText = document.getElementById('tl-more-text-3'); const dots = document.getElementById('tl-more-dots-3'); if(moreText.style.display === 'none') { moreText.style.display = 'inline'; dots.style.display = 'none'; this.innerText = 'less...'; } else { moreText.style.display = 'none'; dots.style.display = 'inline'; this.innerText = 'more...'; }"
-                                    style="color: var(--gold); font-size: 0.85rem; text-decoration: none; margin-left: 5px;">more...</a>
-                            </p>
-                        </div>
+                        <h4 style="font-size: 1.1rem; font-weight: 700; margin-bottom: 15px; line-height: 1.3;">Corporate<br>Consolidation</h4>
+                        <p style="font-size: 0.85rem; color: var(--text-2); line-height: 1.5; margin: 0;">Central operations dashboard, technician training, bulk parts distribution...</p>
                     </div>
 
-                    <div class="tl-node reveal">
-                        <div class="tl-dot-wrap">
-                            <div class="tl-dot"></div>
+                    <!-- Card 05 -->
+                    <div class="reveal traj-card-target">
+                        <!-- Top red block -->
+                        <div class="target-top-block">
+                            <div class="target-circle">05</div>
                         </div>
-                        <div class="tl-yr gold">Year 4</div>
-                        <div class="tl-card">
-                            <span class="tl-ph">PHASE 04</span>
-                            <h4 class="tl-h4">Corporate Consolidation</h4>
-                            <p class="tl-p">Central operations dashboard, technician training, bulk parts
-                                distribution<span id="tl-more-dots-4">...</span><span id="tl-more-text-4"
-                                    style="display: none;">,
-                                    corporate fleet service, export testing, and investor reporting system.</span>
-                                <a href="javascript:void(0);"
-                                    onclick="const moreText = document.getElementById('tl-more-text-4'); const dots = document.getElementById('tl-more-dots-4'); if(moreText.style.display === 'none') { moreText.style.display = 'inline'; dots.style.display = 'none'; this.innerText = 'less...'; } else { moreText.style.display = 'none'; dots.style.display = 'inline'; this.innerText = 'more...'; }"
-                                    style="color: var(--gold); font-size: 0.85rem; text-decoration: none; margin-left: 5px;">more...</a>
-                            </p>
+                        <div style="padding: 0 20px 30px;">
+                            <div style="position: relative; margin-bottom: 20px;">
+                                <div class="target-separator"></div>
+                                <span class="target-label">TARGET</span>
+                            </div>
+                            <h4 class="target-title">Market Leadership &<br>Global Trade</h4>
+                            <p style="font-size: 0.85rem; color: var(--text-2); line-height: 1.5; margin: 0;">40+ branches/franchise partners, 12,000+ SKUs, import-export growth...</p>
                         </div>
                     </div>
-
-                    <div class="tl-node reveal">
-                        <div class="tl-dot-wrap">
-                            <div class="tl-dot tl-dot-gold"></div>
-                        </div>
-                        <div class="tl-yr gold">Year 5</div>
-                        <div class="tl-card tl-card-gold">
-                            <span class="tl-ph tl-ph-gold">TARGET</span>
-                            <h4 class="tl-h4">Market Leadership & Global Trade</h4>
-                            <p class="tl-p">40+ branches/franchise partners, 12,000+ SKUs, import-export growth<span
-                                    id="tl-more-dots-5">...</span><span id="tl-more-text-5" style="display: none;">,
-                                    automobile service ecosystem, strategic investors, and national expansion
-                                    roadmap.</span>
-                                <a href="javascript:void(0);"
-                                    onclick="const moreText = document.getElementById('tl-more-text-5'); const dots = document.getElementById('tl-more-dots-5'); if(moreText.style.display === 'none') { moreText.style.display = 'inline'; dots.style.display = 'none'; this.innerText = 'less...'; } else { moreText.style.display = 'none'; dots.style.display = 'inline'; this.innerText = 'more...'; }"
-                                    style="color: var(--gold); font-size: 0.85rem; text-decoration: none; margin-left: 5px;">more...</a>
-                            </p>
-                        </div>
-                    </div>
-
                 </div>
             </div>
         </section>
@@ -703,30 +764,74 @@
 
             <div class="container">
                 <div>
-                    <div style="margin-bottom: 60px;">
-                        <h2 class="sec-h2 reveal" style="font-size: clamp(2.2rem, 4vw, 3.2rem);">Partnerships & <em
-                                class="gold">Investor Enquiries</em></h2>
-                        <div class="sec-label reveal" style="margin-top: 15px;">Corporate collaboration and capital
-                            growth messaging</div>
+                    <div style="margin-bottom: 50px;">
+                        <h2 class="sec-h2 reveal" style="font-size: clamp(2.5rem, 4vw, 3.5rem); font-weight: 800; letter-spacing: -1px; line-height: 1.1;">
+                            Partnerships & <em style="color: #b02323; font-style: italic;">Investor Enquiries</em>
+                        </h2>
+                        <div class="reveal" style="background-color: #b02323; width: 60px; height: 3px; margin: 20px 0;"></div>
+                        <div class="reveal" style="margin-top: 15px; font-size: 0.8rem; font-weight: 700; letter-spacing: 3px; color: #b02323; text-transform: uppercase;">
+                            Corporate collaboration and capital growth messaging
+                        </div>
                     </div>
 
-                    <h3 class="reveal"
-                        style="color: var(--gold); margin-bottom: 15px; font-size: 1.8rem; font-family: var(--f-display);">
-                        Institutional Partnerships & Strategic Collaborations</h3>
-                    <p class="sec-body reveal" style="margin-bottom: 30px;">We welcome collaborations with automobile
-                        brands, spare parts manufacturers, training institutes, fleet operators, finance companies,
-                        insurance providers, logistics partners, technology companies, and international suppliers.</p>
+                    <div style="margin-bottom: 40px;" class="reveal">
+                        <div style="display: flex; gap: 15px; margin-bottom: 15px;">
+                            <div style="width: 4px; background-color: #b02323; flex-shrink: 0;"></div>
+                            <h3 style="color: #b02323; font-size: 1.6rem; font-weight: 700; margin: 0; display: flex; align-items: center;">
+                                Institutional Partnerships & Strategic Collaborations
+                            </h3>
+                        </div>
+                        <p class="sec-body" style="margin-bottom: 0; color: var(--text-2); max-width: 800px; line-height: 1.6;">
+                            We welcome collaborations with automobile brands, spare parts manufacturers, training institutes, fleet operators, finance companies, insurance providers, logistics partners, technology companies, and international suppliers.
+                        </p>
+                    </div>
 
                     <div class="partners-grid reveal">
-                        <div class="partner-item">Spare Parts Manufacturers</div>
-                        <div class="partner-item">Fleet Operators</div>
-                        <div class="partner-item">Training Institutes</div>
-                        <div class="partner-item">Insurance Companies</div>
-                        <div class="partner-item">Vehicle Finance Firms</div>
-                        <div class="partner-item">Garage Equipment Suppliers</div>
-                        <div class="partner-item">Logistics Partners</div>
-                        <div class="partner-item">EV Diagnostic Companies</div>
-                        <div class="partner-item">Import-Export Suppliers</div>
+                        <!-- Card 1 -->
+                        <div class="partner-card">
+                            <div class="partner-icon"><i class="bi bi-gear"></i></div>
+                            <div class="partner-text">Spare Parts Manufacturers</div>
+                        </div>
+                        <!-- Card 2 -->
+                        <div class="partner-card">
+                            <div class="partner-icon"><i class="bi bi-truck"></i></div>
+                            <div class="partner-text">Fleet Operators</div>
+                        </div>
+                        <!-- Card 3 -->
+                        <div class="partner-card">
+                            <div class="partner-icon"><i class="bi bi-mortarboard"></i></div>
+                            <div class="partner-text">Training Institutes</div>
+                        </div>
+                        <!-- Card 4 -->
+                        <div class="partner-card">
+                            <div class="partner-icon"><i class="bi bi-shield-check"></i></div>
+                            <div class="partner-text">Insurance Companies</div>
+                        </div>
+                        <!-- Card 5 -->
+                        <div class="partner-card">
+                            <div class="partner-icon"><i class="bi bi-cash-coin"></i></div>
+                            <div class="partner-text">Vehicle Finance Firms</div>
+                        </div>
+                        <!-- Card 6 -->
+                        <div class="partner-card">
+                            <div class="partner-icon"><i class="bi bi-tools"></i></div>
+                            <div class="partner-text">Garage Equipment Suppliers</div>
+                        </div>
+                        <!-- Card 7 -->
+                        <div class="partner-card">
+                            <div class="partner-icon"><i class="bi bi-box-seam"></i></div>
+                            <div class="partner-text">Logistics Partners</div>
+                        </div>
+                        <!-- Card 8 -->
+                        <div class="partner-card">
+                            <div class="partner-icon"><i class="bi bi-car-front"></i></div>
+                            <div class="partner-text">EV Diagnostic Companies</div>
+                        </div>
+                        <!-- Card 9 -->
+                        <div class="partner-card">
+                            <div class="partner-icon"><i class="bi bi-globe2"></i></div>
+                            <div class="partner-text">Import-Export Suppliers</div>
+                        </div>
                     </div>
                 </div>
             </div>
