@@ -1493,9 +1493,9 @@ img {
 
 .ov-layout {
     display: grid;
-    grid-template-columns: 1.15fr 1fr;
-    gap: 100px;
-    align-items: stretch;
+    grid-template-columns: 1fr 1fr;
+    gap: 8vw;
+    align-items: center;
 }
 
 .ov-left {
@@ -1522,7 +1522,7 @@ img {
 
 @media (min-width: 1201px) {
     .ov-stats {
-        margin-left: -32px;
+        margin-left: 0;
     }
 }
 
