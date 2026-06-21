@@ -150,6 +150,63 @@ function initLenis() {
         }
         requestAnimationFrame(raf);
     }
+
+    // Handle anchor links
+    document.querySelectorAll('a[href*="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            const href = this.getAttribute('href');
+            if (href === '#') return;
+
+            try {
+                // Check if it's an internal link
+                const url = new URL(this.href, window.location.origin);
+                if (url.pathname === window.location.pathname) {
+                    const targetEl = document.querySelector(url.hash);
+                    if (targetEl) {
+                        e.preventDefault();
+                        
+                        // Close mobile menu if open
+                        const menu = document.getElementById('mob-menu');
+                        const burger = document.getElementById('burger');
+                        const nav = document.getElementById('nav');
+                        if (menu && menu.classList.contains('open')) {
+                            menu.classList.remove('open');
+                            if (burger) {
+                                burger.classList.remove('active');
+                                burger.setAttribute('aria-expanded', 'false');
+                            }
+                            if (nav) nav.classList.remove('menu-open');
+                            document.body.style.overflow = '';
+                            if (window.lenis) window.lenis.start();
+                        }
+
+                        lenis.scrollTo(targetEl, { offset: -80 });
+                    }
+                }
+            } catch (err) {}
+        });
+    });
+
+    // Handle hash on page load
+    if (window.location.hash) {
+        const hash = window.location.hash;
+        const doScroll = () => {
+            setTimeout(() => {
+                try {
+                    const targetEl = document.querySelector(hash);
+                    if (targetEl) {
+                        lenis.scrollTo(targetEl, { offset: -80, immediate: true });
+                    }
+                } catch (e) {}
+            }, 100);
+        };
+
+        if (document.readyState === 'complete') {
+            doScroll();
+        } else {
+            window.addEventListener('load', doScroll);
+        }
+    }
 }
 
 /* ─────────────────────────────────────────────────────────
@@ -267,6 +324,9 @@ function initMobileMenu() {
         burger.classList.toggle('active', open);
         burger.setAttribute('aria-expanded', open);
         menu.setAttribute('aria-hidden', !open);
+
+        const nav = document.getElementById('nav');
+        if (nav) nav.classList.toggle('menu-open', open);
 
         document.body.style.overflow = open ? 'hidden' : '';
         if (window.lenis) {

@@ -599,6 +599,15 @@ img {
     backdrop-filter: blur(24px) saturate(200%);
 }
 
+.nav.menu-open {
+    background: rgba(10, 10, 10, 0.97);
+    border-bottom: 1px solid var(--border);
+}
+
+[data-theme="light"] .nav.menu-open {
+    background: rgba(247, 247, 245, 0.97);
+}
+
 .nav-inner {
     width: 100%;
     margin: 0 auto;
