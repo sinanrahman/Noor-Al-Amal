@@ -54,7 +54,8 @@
         <div class="pre-inner">
             <div class="pre-logo-wrapper"
                 style="display: flex; align-items: center; justify-content: center; gap: 14px; margin-bottom: 30px;">
-                <img src="assets/images/noor-logo-dark.png" alt="ANA Logo" class="logo-mark" style="height: 200px; width: auto; max-width: none;">
+                <img src="assets/images/noor-logo-dark.png" alt="ANA Logo" class="logo-mark"
+                    style="height: 200px; width: auto; max-width: none;">
             </div>
             <div class="pre-track">
                 <div class="pre-fill" id="pre-fill"></div>
@@ -218,8 +219,6 @@
                                 onclick="const moreText = document.getElementById('ov-more-text'); const dots = document.getElementById('ov-more-dots'); if(moreText.style.display === 'none') { moreText.style.display = 'inline'; dots.style.display = 'none'; this.innerText = 'less...'; } else { moreText.style.display = 'none'; dots.style.display = 'inline'; this.innerText = 'more...'; }"
                                 style="color: var(--gold); font-size: 0.95rem; text-decoration: none; margin-left: 5px;">more...</a>
                         </p>
-                        <a href="#verticals" class="btn-gold reveal"
-                            style="margin-top: 15px; display: inline-block;">Explore Operations</a>
                     </div>
                     <div class="ov-right">
                         <div class="ov-stats">
@@ -476,8 +475,10 @@
                         .ovs-grid-custom {
                             grid-template-columns: repeat(2, 1fr);
                         }
+
                         .ovs-left-only {
-                            border: 1px solid var(--border-2); /* add borders for grid look on smaller screens */
+                            border: 1px solid var(--border-2);
+                            /* add borders for grid look on smaller screens */
                             border-radius: 12px;
                         }
                     }
@@ -522,32 +523,43 @@
                 <div class="exc-layout">
                     <div class="exc-left" style="position: relative; padding-bottom: 60px;">
                         <!-- Background Image layer -->
-                        <div class="reveal" style="position: absolute; top: 0; left: -20px; right: -20px; bottom: 0; z-index: 0; pointer-events: none;">
-                            <img src="assets/images/hero.jpg" alt="Future Performance Concept" style="width: 100%; height: 100%; object-fit: cover; object-position: bottom; mask-image: linear-gradient(to bottom, transparent 0%, black 50%, black 100%); -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 50%, black 100%); opacity: 0.6;">
+                        <div class="reveal"
+                            style="position: absolute; top: 0; left: -20px; right: -20px; bottom: 0; z-index: 0; pointer-events: none;">
+                            <img src="assets/images/hero.jpg" alt="Future Performance Concept"
+                                style="width: 100%; height: 100%; object-fit: cover; object-position: bottom; mask-image: linear-gradient(to bottom, transparent 0%, black 50%, black 100%); -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 50%, black 100%); opacity: 0.6;">
                         </div>
 
                         <div class="exc-hdr" style="display: block; position: relative; z-index: 2;">
                             <div class="reveal" style="margin-bottom: 20px;">
-                                <div style="font-size: 1.8rem; color: var(--text); margin-bottom: 5px; display: inline-block;">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" viewBox="0 0 16 16">
-                                      <path fill-rule="evenodd" d="M0 0h1v15h15v1H0V0Zm14.817 3.113a.5.5 0 0 1 .07.704l-4.5 5.5a.5.5 0 0 1-.74.037L7.06 6.767l-3.656 5.027a.5.5 0 0 1-.808-.588l4-5.5a.5.5 0 0 1 .758-.06l2.609 2.61 4.15-5.073a.5.5 0 0 1 .704-.07Z"/>
+                                <div
+                                    style="font-size: 1.8rem; color: var(--text); margin-bottom: 5px; display: inline-block;">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor"
+                                        viewBox="0 0 16 16">
+                                        <path fill-rule="evenodd"
+                                            d="M0 0h1v15h15v1H0V0Zm14.817 3.113a.5.5 0 0 1 .07.704l-4.5 5.5a.5.5 0 0 1-.74.037L7.06 6.767l-3.656 5.027a.5.5 0 0 1-.808-.588l4-5.5a.5.5 0 0 1 .758-.06l2.609 2.61 4.15-5.073a.5.5 0 0 1 .704-.07Z" />
                                     </svg>
                                 </div>
-                                <div class="sec-label" style="font-size: 0.75rem; font-weight: 700; letter-spacing: 2px; color: #b02323; text-transform: uppercase;">FINANCIAL TRAJECTORY</div>
+                                <div class="sec-label"
+                                    style="font-size: 0.75rem; font-weight: 700; letter-spacing: 2px; color: #b02323; text-transform: uppercase;">
+                                    FINANCIAL TRAJECTORY</div>
                             </div>
-                            
-                            <h2 class="sec-h2 reveal" style="font-size: clamp(3rem, 5vw, 4rem); font-weight: 800; letter-spacing: -1px; line-height: 1.1; margin-bottom: 20px;">
+
+                            <h2 class="sec-h2 reveal"
+                                style="font-size: clamp(3rem, 5vw, 4rem); font-weight: 800; letter-spacing: -1px; line-height: 1.1; margin-bottom: 20px;">
                                 Future<br>Performance<br><em style="color: #b02323; font-style: italic;">Outlook</em>
                             </h2>
-                            <div class="red-line reveal" style="background-color: #b02323; width: 60px; height: 3px; margin: 20px 0;"></div>
-                            
+                            <div class="red-line reveal"
+                                style="background-color: #b02323; width: 60px; height: 3px; margin: 20px 0;"></div>
+
                             <p class="sec-body reveal" style="margin-bottom:20px; color: var(--text-2);">Built
                                 for trade, service, franchise and mobility markets</p>
                             <p class="sec-body reveal" style="margin-bottom:30px;">
                                 Our 5-year growth plan is based on multiple automobile revenue channels<span
-                                    id="exc-more-dots"></span><span id="exc-more-text" style="display: none;">. Instead of
+                                    id="exc-more-dots"></span><span id="exc-more-text" style="display: none;">. Instead
+                                    of
                                     depending on one business model, we
-                                    are developing a diversified corporate ecosystem with trading, service, franchise, resale,
+                                    are developing a diversified corporate ecosystem with trading, service, franchise,
+                                    resale,
                                     and
                                     global sourcing opportunities.</span>
                                 <a href="javascript:void(0);"
@@ -575,7 +587,8 @@
                             <div class="exc-card reveal">
                                 <div class="exc-icon-wrapper"><i class="bi bi-shop"></i></div>
                                 <div class="exc-card-num">03</div>
-                                <p class="exc-card-text">Increasing need for organized workshops and service networks.</p>
+                                <p class="exc-card-text">Increasing need for organized workshops and service networks.
+                                </p>
                             </div>
                             <!-- Card 04 -->
                             <div class="exc-card reveal">
@@ -587,7 +600,8 @@
                             <div class="exc-card reveal">
                                 <div class="exc-icon-wrapper"><i class="bi bi-ev-front"></i></div>
                                 <div class="exc-card-num">05</div>
-                                <p class="exc-card-text">Electric vehicle transition creating service and diagnostics opportunities.</p>
+                                <p class="exc-card-text">Electric vehicle transition creating service and diagnostics
+                                    opportunities.</p>
                             </div>
                         </div>
                     </div>
@@ -604,53 +618,96 @@
 ═══════════════════════════════════════════════════════════ -->
         <section class="section traj-sec" id="trajectory" style="padding-top: 40px;">
             <div class="container">
-                <h2 class="sec-h2 reveal" style="font-size: clamp(3rem, 5vw, 4rem); font-weight: 800; letter-spacing: -1px; line-height: 1.1; margin-bottom: 10px;">The 2030 Strategic<br><span style="color: #b02323;">Trajectory</span></h2>
-                <div class="red-line reveal" style="background-color: #b02323; width: 60px; height: 3px; margin: 20px 0;"></div>
-                <p class="sec-body reveal" style="margin-bottom:60px; max-width:580px; font-size: 1.1rem; color: var(--text-2); line-height: 1.6;">A phased approach to regional automotive leadership — structured for scalable execution, investor transparency, and measurable milestone delivery.</p>
+                <h2 class="sec-h2 reveal"
+                    style="font-size: clamp(3rem, 5vw, 4rem); font-weight: 800; letter-spacing: -1px; line-height: 1.1; margin-bottom: 10px;">
+                    The 2030 Strategic<br><span style="color: #b02323;">Trajectory</span></h2>
+                <div class="red-line reveal"
+                    style="background-color: #b02323; width: 60px; height: 3px; margin: 20px 0;"></div>
+                <p class="sec-body reveal"
+                    style="margin-bottom:60px; max-width:580px; font-size: 1.1rem; color: var(--text-2); line-height: 1.6;">
+                    A phased approach to regional automotive leadership — structured for scalable execution, investor
+                    transparency, and measurable milestone delivery.</p>
 
-                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; align-items: stretch;">
+                <div
+                    style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; align-items: stretch;">
                     <!-- Card 01 -->
-                    <div class="reveal traj-card-hover" style="background: var(--bg2); border: 1px solid var(--border); border-radius: 8px; padding: 30px 20px; text-align: center; display: flex; flex-direction: column;">
-                        <div style="margin: 0 auto 20px; width: 60px; height: 60px; border-radius: 50%; border: 1px solid rgba(176,35,35,0.2); background: rgba(176,35,35,0.05); display: flex; align-items: center; justify-content: center; font-size: 1.5rem; font-weight: 800; color: #b02323; font-family: var(--f-display);">01</div>
+                    <div class="reveal traj-card-hover"
+                        style="background: var(--bg2); border: 1px solid var(--border); border-radius: 8px; padding: 30px 20px; text-align: center; display: flex; flex-direction: column;">
+                        <div
+                            style="margin: 0 auto 20px; width: 60px; height: 60px; border-radius: 50%; border: 1px solid rgba(176,35,35,0.2); background: rgba(176,35,35,0.05); display: flex; align-items: center; justify-content: center; font-size: 1.5rem; font-weight: 800; color: #b02323; font-family: var(--f-display);">
+                            01</div>
                         <div style="position: relative; margin-bottom: 20px;">
-                            <div style="position: absolute; top: 50%; left: 0; right: 0; height: 1px; background: var(--border); z-index: 1;"></div>
-                            <span style="position: relative; z-index: 2; background: var(--bg2); padding: 0 10px; font-size: 0.7rem; letter-spacing: 2px; color: var(--text-2); font-weight: 600;">PHASE 01</span>
+                            <div
+                                style="position: absolute; top: 50%; left: 0; right: 0; height: 1px; background: var(--border); z-index: 1;">
+                            </div>
+                            <span
+                                style="position: relative; z-index: 2; background: var(--bg2); padding: 0 10px; font-size: 0.7rem; letter-spacing: 2px; color: var(--text-2); font-weight: 600;">PHASE
+                                01</span>
                         </div>
-                        <h4 style="font-size: 1.1rem; font-weight: 700; margin-bottom: 15px; line-height: 1.3;">Foundation &<br>Market Entry</h4>
-                        <p style="font-size: 0.85rem; color: var(--text-2); line-height: 1.5; margin: 0;">Brand launch, supplier onboarding, initial workshop setup...</p>
+                        <h4 style="font-size: 1.1rem; font-weight: 700; margin-bottom: 15px; line-height: 1.3;">
+                            Foundation &<br>Market Entry</h4>
+                        <p style="font-size: 0.85rem; color: var(--text-2); line-height: 1.5; margin: 0;">Brand launch,
+                            supplier onboarding, initial workshop setup...</p>
                     </div>
-                    
+
                     <!-- Card 02 -->
-                    <div class="reveal traj-card-hover" style="background: var(--bg2); border: 1px solid var(--border); border-radius: 8px; padding: 30px 20px; text-align: center; display: flex; flex-direction: column;">
-                        <div style="margin: 0 auto 20px; width: 60px; height: 60px; border-radius: 50%; border: 1px solid rgba(176,35,35,0.2); background: rgba(176,35,35,0.05); display: flex; align-items: center; justify-content: center; font-size: 1.5rem; font-weight: 800; color: #b02323; font-family: var(--f-display);">02</div>
+                    <div class="reveal traj-card-hover"
+                        style="background: var(--bg2); border: 1px solid var(--border); border-radius: 8px; padding: 30px 20px; text-align: center; display: flex; flex-direction: column;">
+                        <div
+                            style="margin: 0 auto 20px; width: 60px; height: 60px; border-radius: 50%; border: 1px solid rgba(176,35,35,0.2); background: rgba(176,35,35,0.05); display: flex; align-items: center; justify-content: center; font-size: 1.5rem; font-weight: 800; color: #b02323; font-family: var(--f-display);">
+                            02</div>
                         <div style="position: relative; margin-bottom: 20px;">
-                            <div style="position: absolute; top: 50%; left: 0; right: 0; height: 1px; background: var(--border); z-index: 1;"></div>
-                            <span style="position: relative; z-index: 2; background: var(--bg2); padding: 0 10px; font-size: 0.7rem; letter-spacing: 2px; color: var(--text-2); font-weight: 600;">PHASE 02</span>
+                            <div
+                                style="position: absolute; top: 50%; left: 0; right: 0; height: 1px; background: var(--border); z-index: 1;">
+                            </div>
+                            <span
+                                style="position: relative; z-index: 2; background: var(--bg2); padding: 0 10px; font-size: 0.7rem; letter-spacing: 2px; color: var(--text-2); font-weight: 600;">PHASE
+                                02</span>
                         </div>
-                        <h4 style="font-size: 1.1rem; font-weight: 700; margin-bottom: 15px; line-height: 1.3;">Expansion &<br>Process Standardization</h4>
-                        <p style="font-size: 0.85rem; color: var(--text-2); line-height: 1.5; margin: 0;">Workshop SOPs, garage franchise model, inventory control...</p>
+                        <h4 style="font-size: 1.1rem; font-weight: 700; margin-bottom: 15px; line-height: 1.3;">
+                            Expansion &<br>Process Standardization</h4>
+                        <p style="font-size: 0.85rem; color: var(--text-2); line-height: 1.5; margin: 0;">Workshop SOPs,
+                            garage franchise model, inventory control...</p>
                     </div>
 
                     <!-- Card 03 -->
-                    <div class="reveal traj-card-hover" style="background: var(--bg2); border: 1px solid var(--border); border-radius: 8px; padding: 30px 20px; text-align: center; display: flex; flex-direction: column;">
-                        <div style="margin: 0 auto 20px; width: 60px; height: 60px; border-radius: 50%; border: 1px solid rgba(176,35,35,0.2); background: rgba(176,35,35,0.05); display: flex; align-items: center; justify-content: center; font-size: 1.5rem; font-weight: 800; color: #b02323; font-family: var(--f-display);">03</div>
+                    <div class="reveal traj-card-hover"
+                        style="background: var(--bg2); border: 1px solid var(--border); border-radius: 8px; padding: 30px 20px; text-align: center; display: flex; flex-direction: column;">
+                        <div
+                            style="margin: 0 auto 20px; width: 60px; height: 60px; border-radius: 50%; border: 1px solid rgba(176,35,35,0.2); background: rgba(176,35,35,0.05); display: flex; align-items: center; justify-content: center; font-size: 1.5rem; font-weight: 800; color: #b02323; font-family: var(--f-display);">
+                            03</div>
                         <div style="position: relative; margin-bottom: 20px;">
-                            <div style="position: absolute; top: 50%; left: 0; right: 0; height: 1px; background: var(--border); z-index: 1;"></div>
-                            <span style="position: relative; z-index: 2; background: var(--bg2); padding: 0 10px; font-size: 0.7rem; letter-spacing: 2px; color: var(--text-2); font-weight: 600;">PHASE 03</span>
+                            <div
+                                style="position: absolute; top: 50%; left: 0; right: 0; height: 1px; background: var(--border); z-index: 1;">
+                            </div>
+                            <span
+                                style="position: relative; z-index: 2; background: var(--bg2); padding: 0 10px; font-size: 0.7rem; letter-spacing: 2px; color: var(--text-2); font-weight: 600;">PHASE
+                                03</span>
                         </div>
-                        <h4 style="font-size: 1.1rem; font-weight: 700; margin-bottom: 15px; line-height: 1.3;">Regional<br>Growth</h4>
-                        <p style="font-size: 0.85rem; color: var(--text-2); line-height: 1.5; margin: 0;">15+ branch/franchise network, regional warehouse planning...</p>
+                        <h4 style="font-size: 1.1rem; font-weight: 700; margin-bottom: 15px; line-height: 1.3;">
+                            Regional<br>Growth</h4>
+                        <p style="font-size: 0.85rem; color: var(--text-2); line-height: 1.5; margin: 0;">15+
+                            branch/franchise network, regional warehouse planning...</p>
                     </div>
 
                     <!-- Card 04 -->
-                    <div class="reveal traj-card-hover" style="background: var(--bg2); border: 1px solid var(--border); border-radius: 8px; padding: 30px 20px; text-align: center; display: flex; flex-direction: column;">
-                        <div style="margin: 0 auto 20px; width: 60px; height: 60px; border-radius: 50%; border: 1px solid rgba(176,35,35,0.2); background: rgba(176,35,35,0.05); display: flex; align-items: center; justify-content: center; font-size: 1.5rem; font-weight: 800; color: #b02323; font-family: var(--f-display);">04</div>
+                    <div class="reveal traj-card-hover"
+                        style="background: var(--bg2); border: 1px solid var(--border); border-radius: 8px; padding: 30px 20px; text-align: center; display: flex; flex-direction: column;">
+                        <div
+                            style="margin: 0 auto 20px; width: 60px; height: 60px; border-radius: 50%; border: 1px solid rgba(176,35,35,0.2); background: rgba(176,35,35,0.05); display: flex; align-items: center; justify-content: center; font-size: 1.5rem; font-weight: 800; color: #b02323; font-family: var(--f-display);">
+                            04</div>
                         <div style="position: relative; margin-bottom: 20px;">
-                            <div style="position: absolute; top: 50%; left: 0; right: 0; height: 1px; background: var(--border); z-index: 1;"></div>
-                            <span style="position: relative; z-index: 2; background: var(--bg2); padding: 0 10px; font-size: 0.7rem; letter-spacing: 2px; color: var(--text-2); font-weight: 600;">PHASE 04</span>
+                            <div
+                                style="position: absolute; top: 50%; left: 0; right: 0; height: 1px; background: var(--border); z-index: 1;">
+                            </div>
+                            <span
+                                style="position: relative; z-index: 2; background: var(--bg2); padding: 0 10px; font-size: 0.7rem; letter-spacing: 2px; color: var(--text-2); font-weight: 600;">PHASE
+                                04</span>
                         </div>
-                        <h4 style="font-size: 1.1rem; font-weight: 700; margin-bottom: 15px; line-height: 1.3;">Corporate<br>Consolidation</h4>
-                        <p style="font-size: 0.85rem; color: var(--text-2); line-height: 1.5; margin: 0;">Central operations dashboard, technician training, bulk parts distribution...</p>
+                        <h4 style="font-size: 1.1rem; font-weight: 700; margin-bottom: 15px; line-height: 1.3;">
+                            Corporate<br>Consolidation</h4>
+                        <p style="font-size: 0.85rem; color: var(--text-2); line-height: 1.5; margin: 0;">Central
+                            operations dashboard, technician training, bulk parts distribution...</p>
                     </div>
 
                     <!-- Card 05 -->
@@ -665,7 +722,8 @@
                                 <span class="target-label">TARGET</span>
                             </div>
                             <h4 class="target-title">Market Leadership &<br>Global Trade</h4>
-                            <p style="font-size: 0.85rem; color: var(--text-2); line-height: 1.5; margin: 0;">40+ branches/franchise partners, 12,000+ SKUs, import-export growth...</p>
+                            <p style="font-size: 0.85rem; color: var(--text-2); line-height: 1.5; margin: 0;">40+
+                                branches/franchise partners, 12,000+ SKUs, import-export growth...</p>
                         </div>
                     </div>
                 </div>
@@ -682,11 +740,14 @@
             <div class="container">
                 <div>
                     <div style="margin-bottom: 50px;">
-                        <h2 class="sec-h2 reveal" style="font-size: clamp(2.5rem, 4vw, 3.5rem); font-weight: 800; letter-spacing: -1px; line-height: 1.1;">
+                        <h2 class="sec-h2 reveal"
+                            style="font-size: clamp(2.5rem, 4vw, 3.5rem); font-weight: 800; letter-spacing: -1px; line-height: 1.1;">
                             Partnerships & <em style="color: #b02323; font-style: italic;">Investor Enquiries</em>
                         </h2>
-                        <div class="reveal" style="background-color: #b02323; width: 60px; height: 3px; margin: 20px 0;"></div>
-                        <div class="reveal" style="margin-top: 15px; font-size: 0.8rem; font-weight: 700; letter-spacing: 3px; color: #b02323; text-transform: uppercase;">
+                        <div class="reveal"
+                            style="background-color: #b02323; width: 60px; height: 3px; margin: 20px 0;"></div>
+                        <div class="reveal"
+                            style="margin-top: 15px; font-size: 0.8rem; font-weight: 700; letter-spacing: 3px; color: #b02323; text-transform: uppercase;">
                             Corporate collaboration and capital growth messaging
                         </div>
                     </div>
@@ -694,12 +755,16 @@
                     <div style="margin-bottom: 40px;" class="reveal">
                         <div style="display: flex; gap: 15px; margin-bottom: 15px;">
                             <div style="width: 4px; background-color: #b02323; flex-shrink: 0;"></div>
-                            <h3 style="color: #b02323; font-size: 1.6rem; font-weight: 700; margin: 0; display: flex; align-items: center;">
+                            <h3
+                                style="color: #b02323; font-size: 1.6rem; font-weight: 700; margin: 0; display: flex; align-items: center;">
                                 Institutional Partnerships & Strategic Collaborations
                             </h3>
                         </div>
-                        <p class="sec-body" style="margin-bottom: 0; color: var(--text-2); max-width: 800px; line-height: 1.6;">
-                            We welcome collaborations with automobile brands, spare parts manufacturers, training institutes, fleet operators, finance companies, insurance providers, logistics partners, technology companies, and international suppliers.
+                        <p class="sec-body"
+                            style="margin-bottom: 0; color: var(--text-2); max-width: 800px; line-height: 1.6;">
+                            We welcome collaborations with automobile brands, spare parts manufacturers, training
+                            institutes, fleet operators, finance companies, insurance providers, logistics partners,
+                            technology companies, and international suppliers.
                         </p>
                     </div>
 
@@ -764,7 +829,8 @@
                 <div class="reveal contact-cta-layout">
                     <div class="contact-cta-header">
                         <h2>Looking to <span style="color: #ed1c24;">connect</span> with us?</h2>
-                        <p>Whether you have a question, a partnership proposal, or an interest in joining our team, select the relevant category below, and we'll direct you to the right form.</p>
+                        <p>Whether you have a question, a partnership proposal, or an interest in joining our team,
+                            select the relevant category below, and we'll direct you to the right form.</p>
                     </div>
                     <div class="contact-cta-buttons">
                         <a href="contact.html" class="btn-contact-action">Connect with us</a>
