@@ -32,7 +32,7 @@ function initTheme() {
     const btn = document.getElementById('theme-btn');
     if (!btn) return;
 
-    const saved = localStorage.getItem('ana-theme') || 'dark';
+    const saved = localStorage.getItem('ana-theme') || 'light';
     document.documentElement.setAttribute('data-theme', saved);
 
     btn.addEventListener('click', () => {

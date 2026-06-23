@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="dark">
+<html lang="en" data-theme="light">
 
 <head>
     <meta charset="UTF-8">
@@ -41,7 +41,7 @@
     <!-- Prevent flash of wrong theme -->
     <script>
         (function () {
-            const t = localStorage.getItem('ana-theme') || 'dark';
+            const t = localStorage.getItem('ana-theme') || 'light';
             document.documentElement.setAttribute('data-theme', t);
         })();
     </script>
@@ -176,7 +176,7 @@
                     </p>
                     <a href="javascript:void(0);"
                         onclick="const desc = document.getElementById('hero-desc'); if(desc.style.webkitLineClamp === '1') { desc.style.webkitLineClamp = 'unset'; this.innerText = 'less...'; } else { desc.style.webkitLineClamp = '1'; this.innerText = 'more...'; }"
-                        style="color: var(--gold); font-size: 0.95rem; text-decoration: none;">more...</a>
+                        style="color: var(--gold); font-size: 0.95rem; text-decoration: underline red;">more..</a>
                 </div>
                 <div class="hero-actions">
                     <a href="#Divisions" class="btn-ghost" style="border: none;">Explore Our Divisions</a>
@@ -215,7 +215,7 @@
                                 billion by 2033.</span>
                             <a href="javascript:void(0);"
                                 onclick="const moreText = document.getElementById('ov-more-text'); const dots = document.getElementById('ov-more-dots'); if(moreText.style.display === 'none') { moreText.style.display = 'inline'; dots.style.display = 'none'; this.innerText = 'less...'; } else { moreText.style.display = 'none'; dots.style.display = 'inline'; this.innerText = 'more...'; }"
-                                style="color: var(--gold); font-size: 0.95rem; text-decoration: none; margin-left: 5px;">more...</a>
+                                style="color: var(--gold); font-size: 0.95rem; text-decoration: underline red; margin-left: 5px;">more..</a>
                         </p>
                     </div>
                     <div class="ov-right">
@@ -443,12 +443,13 @@
                         border-top: none;
                         border-bottom: none;
                         border-right: none;
-                        padding: clamp(20px, 3vw, 50px) 20px;
-                        text-align: center;
+                        padding: 40px 15px 0px 15px;
+                        min-height: 160px;
+                        text-align: left;
                         display: flex;
                         flex-direction: column;
-                        justify-content: center;
-                        align-items: center;
+                        justify-content: flex-end;
+                        align-items: flex-start;
                         height: 100%;
                     }
 
@@ -501,9 +502,8 @@
                         <div class="ovs-label">Service Capacity Target</div>
                     </div>
                     <div class="ovs reveal ovs-left-only" style="background: transparent;">
-                        <div class="ovs-n gold"><span class="cnt" data-t="3">0</span><span
-                                style="font-size: 1.2rem; margin-left: 6px;">Markets</span></div>
-                        <div class="ovs-label">Retail, Wholesale & Institutional</div>
+                        <div class="ovs-n gold"><span class="cnt" data-t="3">0</span><span>+</span></div>
+                        <div class="ovs-label">Markets </div>
                     </div>
                 </div>
             </div>
@@ -562,7 +562,7 @@
                                     global sourcing opportunities.</span>
                                 <a href="javascript:void(0);"
                                     onclick="const moreText = document.getElementById('exc-more-text'); const dots = document.getElementById('exc-more-dots'); if(moreText.style.display === 'none') { moreText.style.display = 'inline'; dots.style.display = 'none'; this.innerText = 'less...'; } else { moreText.style.display = 'none'; dots.style.display = 'inline'; this.innerText = 'more...'; }"
-                                    style="color: #b02323; font-size: 0.95rem; text-decoration: none; margin-left: 5px;">more...</a>
+                                    style="color: #b02323; font-size: 0.95rem; text-decoration: underline red; margin-left: 5px;">more...</a>
                             </p>
                         </div>
                     </div>
@@ -579,7 +579,7 @@
                             <div class="exc-card reveal">
                                 <div class="exc-icon-wrapper"><i class="bi bi-gear-wide-connected"></i></div>
                                 <div class="exc-card-num">02</div>
-                                <p class="exc-card-text">Rising demand for spare parts and replacement components.</p>
+                                <p class="exc-card-text">Rising demand for spare parts and components.</p>
                             </div>
                             <!-- Card 03 -->
                             <div class="exc-card reveal">
@@ -592,7 +592,7 @@
                             <div class="exc-card reveal">
                                 <div class="exc-icon-wrapper"><i class="bi bi-arrow-repeat"></i></div>
                                 <div class="exc-card-num">04</div>
-                                <p class="exc-card-text">Growth of used vehicle trading and certified resale.</p>
+                                <p class="exc-card-text">Growth of used vehicle <br> trading and certified resale.</p>
                             </div>
                             <!-- Card 05 -->
                             <div class="exc-card reveal">
@@ -629,83 +629,67 @@
                 <div
                     style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; align-items: stretch;">
                     <!-- Card 01 -->
-                    <div class="reveal traj-card-hover"
-                        style="background: var(--bg2); border: 1px solid var(--border); border-radius: 8px; padding: 30px 20px; text-align: center; display: flex; flex-direction: column;">
-                        <div
-                            style="margin: 0 auto 20px; width: 60px; height: 60px; border-radius: 50%; border: 1px solid rgba(176,35,35,0.2); background: rgba(176,35,35,0.05); display: flex; align-items: center; justify-content: center; font-size: 1.5rem; font-weight: 800; color: #b02323; font-family: var(--f-display);">
-                            01</div>
-                        <div style="position: relative; margin-bottom: 20px;">
-                            <div
-                                style="position: absolute; top: 50%; left: 0; right: 0; height: 1px; background: var(--border); z-index: 1;">
-                            </div>
-                            <span
-                                style="position: relative; z-index: 2; background: var(--bg2); padding: 0 10px; font-size: 0.7rem; letter-spacing: 2px; color: var(--text-2); font-weight: 600;">PHASE
-                                01</span>
+                    <div class="reveal traj-card-target">
+                        <div class="target-top-block">
+                            <div class="target-circle">01</div>
                         </div>
-                        <h4 style="font-size: 1.1rem; font-weight: 700; margin-bottom: 15px; line-height: 1.3;">
-                            Foundation &<br>Market Entry</h4>
-                        <p style="font-size: 0.85rem; color: var(--text-2); line-height: 1.5; margin: 0;">Brand launch,
-                            supplier onboarding, initial workshop setup...</p>
+                        <div style="padding: 0 20px 30px;">
+                            <div style="position: relative; margin-bottom: 20px;">
+                                <div class="target-separator"></div>
+                                <span class="target-label">PHASE 01</span>
+                            </div>
+                            <h4 class="target-title">Foundation &<br>Market Entry</h4>
+                            <p style="font-size: 0.85rem; color: var(--text-2); line-height: 1.5; margin: 0;">Brand launch,
+                                supplier onboarding, initial workshop setup...</p>
+                        </div>
                     </div>
 
                     <!-- Card 02 -->
-                    <div class="reveal traj-card-hover"
-                        style="background: var(--bg2); border: 1px solid var(--border); border-radius: 8px; padding: 30px 20px; text-align: center; display: flex; flex-direction: column;">
-                        <div
-                            style="margin: 0 auto 20px; width: 60px; height: 60px; border-radius: 50%; border: 1px solid rgba(176,35,35,0.2); background: rgba(176,35,35,0.05); display: flex; align-items: center; justify-content: center; font-size: 1.5rem; font-weight: 800; color: #b02323; font-family: var(--f-display);">
-                            02</div>
-                        <div style="position: relative; margin-bottom: 20px;">
-                            <div
-                                style="position: absolute; top: 50%; left: 0; right: 0; height: 1px; background: var(--border); z-index: 1;">
-                            </div>
-                            <span
-                                style="position: relative; z-index: 2; background: var(--bg2); padding: 0 10px; font-size: 0.7rem; letter-spacing: 2px; color: var(--text-2); font-weight: 600;">PHASE
-                                02</span>
+                    <div class="reveal traj-card-target">
+                        <div class="target-top-block">
+                            <div class="target-circle">02</div>
                         </div>
-                        <h4 style="font-size: 1.1rem; font-weight: 700; margin-bottom: 15px; line-height: 1.3;">
-                            Expansion &<br>Process Standardization</h4>
-                        <p style="font-size: 0.85rem; color: var(--text-2); line-height: 1.5; margin: 0;">Workshop SOPs,
-                            garage franchise model, inventory control...</p>
+                        <div style="padding: 0 20px 30px;">
+                            <div style="position: relative; margin-bottom: 20px;">
+                                <div class="target-separator"></div>
+                                <span class="target-label">PHASE 02</span>
+                            </div>
+                            <h4 class="target-title">Expansion &Process<br> Standardization</h4>
+                            <p style="font-size: 0.85rem; color: var(--text-2); line-height: 1.5; margin: 0;">Workshop SOPs,
+                                garage franchise model, inventory control...</p>
+                        </div>
                     </div>
 
                     <!-- Card 03 -->
-                    <div class="reveal traj-card-hover"
-                        style="background: var(--bg2); border: 1px solid var(--border); border-radius: 8px; padding: 30px 20px; text-align: center; display: flex; flex-direction: column;">
-                        <div
-                            style="margin: 0 auto 20px; width: 60px; height: 60px; border-radius: 50%; border: 1px solid rgba(176,35,35,0.2); background: rgba(176,35,35,0.05); display: flex; align-items: center; justify-content: center; font-size: 1.5rem; font-weight: 800; color: #b02323; font-family: var(--f-display);">
-                            03</div>
-                        <div style="position: relative; margin-bottom: 20px;">
-                            <div
-                                style="position: absolute; top: 50%; left: 0; right: 0; height: 1px; background: var(--border); z-index: 1;">
-                            </div>
-                            <span
-                                style="position: relative; z-index: 2; background: var(--bg2); padding: 0 10px; font-size: 0.7rem; letter-spacing: 2px; color: var(--text-2); font-weight: 600;">PHASE
-                                03</span>
+                    <div class="reveal traj-card-target">
+                        <div class="target-top-block">
+                            <div class="target-circle">03</div>
                         </div>
-                        <h4 style="font-size: 1.1rem; font-weight: 700; margin-bottom: 15px; line-height: 1.3;">
-                            Regional<br>Growth</h4>
-                        <p style="font-size: 0.85rem; color: var(--text-2); line-height: 1.5; margin: 0;">15+
-                            branch/franchise network, regional warehouse planning...</p>
+                        <div style="padding: 0 20px 30px;">
+                            <div style="position: relative; margin-bottom: 20px;">
+                                <div class="target-separator"></div>
+                                <span class="target-label">PHASE 03</span>
+                            </div>
+                            <h4 class="target-title">Regional<br>Growth</h4>
+                            <p style="font-size: 0.85rem; color: var(--text-2); line-height: 1.5; margin: 0;">15+
+                                branch/franchise network, regional warehouse planning...</p>
+                        </div>
                     </div>
 
                     <!-- Card 04 -->
-                    <div class="reveal traj-card-hover"
-                        style="background: var(--bg2); border: 1px solid var(--border); border-radius: 8px; padding: 30px 20px; text-align: center; display: flex; flex-direction: column;">
-                        <div
-                            style="margin: 0 auto 20px; width: 60px; height: 60px; border-radius: 50%; border: 1px solid rgba(176,35,35,0.2); background: rgba(176,35,35,0.05); display: flex; align-items: center; justify-content: center; font-size: 1.5rem; font-weight: 800; color: #b02323; font-family: var(--f-display);">
-                            04</div>
-                        <div style="position: relative; margin-bottom: 20px;">
-                            <div
-                                style="position: absolute; top: 50%; left: 0; right: 0; height: 1px; background: var(--border); z-index: 1;">
-                            </div>
-                            <span
-                                style="position: relative; z-index: 2; background: var(--bg2); padding: 0 10px; font-size: 0.7rem; letter-spacing: 2px; color: var(--text-2); font-weight: 600;">PHASE
-                                04</span>
+                    <div class="reveal traj-card-target">
+                        <div class="target-top-block">
+                            <div class="target-circle">04</div>
                         </div>
-                        <h4 style="font-size: 1.1rem; font-weight: 700; margin-bottom: 15px; line-height: 1.3;">
-                            Corporate<br>Consolidation</h4>
-                        <p style="font-size: 0.85rem; color: var(--text-2); line-height: 1.5; margin: 0;">Central
-                            operations dashboard, technician training, bulk parts distribution...</p>
+                        <div style="padding: 0 20px 30px;">
+                            <div style="position: relative; margin-bottom: 20px;">
+                                <div class="target-separator"></div>
+                                <span class="target-label">PHASE 04</span>
+                            </div>
+                            <h4 class="target-title">Corporate<br>Consolidation</h4>
+                            <p style="font-size: 0.85rem; color: var(--text-2); line-height: 1.5; margin: 0;">Central
+                                operations dashboard, technician training, bulk parts distribution...</p>
+                        </div>
                     </div>
 
                     <!-- Card 05 -->
@@ -826,9 +810,9 @@
             <div class="container">
                 <div class="reveal contact-cta-layout">
                     <div class="contact-cta-header">
-                        <h2>Looking to <span style="color: #ed1c24;">connect</span> with us?</h2>
+                        <h2>Looking to <br> <span style="color: #ed1c24;">connect</span> with us?</h2>
                         <p>Whether you have a question, a partnership proposal, or an interest in joining our team,
-                            select the relevant category below, and we'll direct you to the right form.</p>
+                            select the relevant category below,<br> and we'll direct you to the right form.</p>
                     </div>
                     <div class="contact-cta-buttons">
                         <a href="contact.html" class="btn-contact-action">Connect with us</a>
@@ -874,30 +858,22 @@
                     <div class="fc">
                         <h5>OPERATIONS</h5>
                         <ul>
-                            <li><a href="#verticals">Spare Parts</a></li>
-                            <li><a href="#verticals">Workshop Hubs</a></li>
-                            <li><a href="#verticals">Fleet Trading</a></li>
-                            <li><a href="#verticals">Logistics</a></li>
+                            <li><a href="divisions.html#spare-parts">Spare Parts</a></li>
+                            <li><a href="divisions.html#workshop">Workshop Hubs</a></li>
+                            <li><a href="divisions.html#trading">Fleet Trading</a></li>
+                            <li><a href="divisions.html#logistics">Logistics</a></li>
                         </ul>
                     </div>
                     <div class="fc">
                         <h5>CORPORATE</h5>
                         <ul>
-                            <li><a href="#overview">About the Group</a></li>
-                            <li><a href="#excellence">Operations</a></li>
-                            <li><a href="#trajectory">2030 Roadmap</a></li>
-                            <li><a href="#investors">Investors</a></li>
+                            <li><a href="index.html#overview">About the Group</a></li>
+                            <li><a href="index.html#excellence">Operations</a></li>
+                            <li><a href="index.html#trajectory">2030 Roadmap</a></li>
+                            <li><a href="index.html#investors">Investors</a></li>
                         </ul>
                     </div>
-                    <div class="fc">
-                        <h5>LEGAL</h5>
-                        <ul>
-                            <li><a href="#">Terms of Engagement</a></li>
-                            <li><a href="#">Privacy Protocol</a></li>
-                            <li><a href="#">Compliance Registry</a></li>
-                            <li><a href="#">DIFC Disclosures</a></li>
-                        </ul>
-                    </div>
+
                 </div>
             </div>
             <div class="footer-bottom">
