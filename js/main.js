@@ -23,6 +23,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initParallax();
     initForm();
     initBrandsSlider();
+    initCountriesSlider();
 });
 
 /* ─────────────────────────────────────────────────────────
@@ -306,7 +307,26 @@ function initNav() {
     const nav = document.getElementById('nav');
     if (!nav) return;
 
-    const fn = () => nav.classList.toggle('glass-nav', window.scrollY > 60);
+    let lastScrollY = window.scrollY;
+
+    const fn = () => {
+        const currentScrollY = window.scrollY;
+        
+        nav.classList.toggle('glass-nav', currentScrollY > 60);
+
+        if (currentScrollY > 60) {
+            if (currentScrollY > lastScrollY) {
+                nav.style.transform = 'translateY(-100%)';
+            } else {
+                nav.style.transform = 'translateY(0)';
+            }
+        } else {
+            nav.style.transform = 'translateY(0)';
+        }
+
+        lastScrollY = currentScrollY;
+    };
+
     window.addEventListener('scroll', fn, { passive: true });
     fn();
 }
@@ -602,4 +622,33 @@ function initBrandsSlider() {
         sliderCol.scrollBy({ left: sliderCol.clientWidth / 2, behavior: 'smooth' });
     });
 }
+
+/* ─────────────────────────────────────────────────────────
+   COUNTRIES SLIDER
+───────────────────────────────────────────────────────── */
+function initCountriesSlider() {
+    const el = document.querySelector('.countries-swiper');
+    if (!el || typeof Swiper === 'undefined') return;
+
+    new Swiper(el, {
+        slidesPerView: 2.2,
+        spaceBetween: 20,
+        grabCursor: true,
+        freeMode: false,
+        loop: true,
+        navigation: {
+            nextEl: '.country-next',
+            prevEl: '.country-prev',
+        },
+        breakpoints: {
+            0: {
+                slidesPerView: 1.2,
+            },
+            768: {
+                slidesPerView: 2.2,
+            }
+        }
+    });
+}
+
 
