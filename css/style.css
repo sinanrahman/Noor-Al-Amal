@@ -1434,6 +1434,7 @@ img {
     color: var(--text-2);
     line-height: 1.72;
     margin-bottom: 28px;
+    font-weight: 600;
 }
 
 
